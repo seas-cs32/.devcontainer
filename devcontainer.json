@@ -35,31 +35,7 @@
                 },
                 "editor.renderWhitespace": "selection",
                 "editor.selectionHighlight": false,
-                "editor.semanticTokenColorCustomizations": {
-                    "[GitHub Dark Default]": {
-                        "rules": {
-                            "type": "#FF7E76"
-                        }
-                    },
-                    "[GitHub Light Default]": {
-                        "rules": {
-                            "type": "#D2343F"
-                        }
-                    }
-                },
-                "editor.stickyScroll.enabled": false,
-                "editor.suggestOnTriggerCharacters": false,
                 "extensions.ignoreRecommendations": true,
-                "explorer.autoOpenDroppedFile": false,
-                "explorer.compactFolders": false,
-                "extension-uninstaller.uninstall": [
-                    "Codeium.codeium",
-                    "Codeium.codeium-enterprise-updater",
-                    "github.copilot",
-                    "github.copilot-nightly",
-                    "ms-toolsai.vscode-jupyter-cell-tags",
-                    "tabnine.tabnine-vscode"
-                ],
                 "files.autoSave": "afterDelay",
                 "files.autoSaveDelay": 1000,
                 "files.exclude": {
@@ -67,126 +43,25 @@
                 },
                 "files.insertFinalNewline": true,
                 "files.trimTrailingWhitespace": true,
-                "files.watcherExclude": {
-                    "**/.git/objects/**": true,
-                    "**/.git/subtree-cache/**": true,
-                    "**/node_modules/*/**": true
-                },
-                "git.autofetch": true, /* Disable "Would you like Code to periodically run 'git fetch'?" toast */
-                "github.codespaces.devcontainerChangedNotificationStyle": "none",
-                "github.codespaces.rebuildEnvironment": true, /* Automatically rebuilds codespace when .devcontainer.json is modified */
-                "git.decorations.enabled": false,
-                "git.terminalAuthentication": true,
-                "github.gitAuthentication": true,
-                "gitdoc.autoPull": "off",
-                "gitdoc.enabled": true,
-                "gitdoc.commitMessageFormat": "ccc, LLL d, kkkk, h:mm a ZZ",
-                "gitdoc.commitValidationLevel": "none",
-                "gitdoc.pullOnOpen": false,
-                "html.autoCreateQuotes": false,
-                "html.format.indentInnerHtml": true,
-                "html.suggest.html5": false,
-                "problems.decorations.enabled": false,
-                "problems.visibility": false,
-                "python.terminal.executeInFileDir": true,
-                "[python]": {
-                  "editor.defaultFormatter": "ms-python.autopep8"
-                },
-                "remote.autoForwardPorts": true,
-                "remote.autoForwardPortsFallback": 0,
-                "remote.autoForwardPortsSource": "process",
-                "remote.otherPortsAttributes": {
-                    "onAutoForward": "silent"
-                },
-                "scm.countBadge": "off",
-                "terminal.integrated.commandsToSkipShell": [
-                    "workbench.action.toggleSidebarVisibility"
-                ],
+                "git.autofetch": true,
                 "terminal.integrated.enableVisualBell": true,
                 "terminal.integrated.defaultProfile.linux": "bash",
-                "terminal.integrated.gpuAcceleration": "off",
-                "terminal.integrated.profiles.linux": {
-                    "JavaScript Debug Terminal": null
-                },
-                "terminal.integrated.persistentSessionReviveProcess": "never",
-                "terminal.integrated.sendKeybindingsToShell": true,
-                "terminal.integrated.shellIntegration.enabled": true,
-                "terminal.integrated.shellIntegration.decorationsEnabled": "never", /* Remove decoration for each command */
-                "terminal.integrated.showExitAlert": false,
-                "terminal.integrated.tabs.description": "${task}${separator}${local}", /* Remove cwdFolder from description */
-                "terminal.integrated.tabs.showActiveTerminal": "never",
-                "window.autoDetectColorScheme": true,
-                "workbench.colorCustomizations": {
-                    "editor.lineHighlightBorder": "#0000", /* Disable gray border-{bottom,top} on active line */
-                    "editorError.foreground": "#FF0000", /* Enable red squiggles */
-                    "editorWarning.foreground": "#FFFF00", /* Enable yellow squiggles */
-                    "editorGutter.addedBackground": "#0000",
-                    "editorGutter.deletedBackground": "#0000",
-                    "editorGutter.modifiedBackground": "#0000", /* Disable yellow bars to left of lines modified since last commit */
-                    "[GitHub Dark Default]": {
-                        "activityBar.background": "#000",
-                        "editor.background": "#000",
-                        "editor.lineHighlightBackground": "#0000",
-                        "editor.lineHighlightBorder": "#0000",
-                        "editorWhitespace.foreground": "#59A5FC",
-                        "panel.background": "#000",
-                        "sideBar.background": "#000",
-                        "terminal.foreground": "#fff",
-                        "terminal.background": "#000"
-                    },
-                    "[GitHub Light Default]": {
-                        "activityBar.background": "#fff",
-                        "editor.background": "#fff",
-                        "editor.lineHighlightBackground": "#fff0",
-                        "editor.lineHighlightBorder": "#fff0",
-                        "editorWhitespace.foreground": "#1167D7",
-                        "panel.background": "#fff",
-                        "sideBar.background": "#fff",
-                        "terminal.foreground": "#000",
-                        "terminal.background": "#fff"
-                    }
-                },
-                "window.commandCenter": false,
-                "workbench.editorAssociations": {
-                    "*.wav": "vscode.audioPreview"
-                },
-                "workbench.editor.closeOnFileDelete": true,
-                "workbench.editor.enablePreview": false,
-                "workbench.iconTheme": "vs-minimal", /* Simplify icons */
-                "workbench.layoutControl.enabled": false,
-                "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-                "workbench.preferredLightColorTheme": "GitHub Light Default",
                 "workbench.startupEditor": "none",
-                "workbench.statusBar.visible": false,
-                "workbench.tips.enabled": false,
-                "workbench.welcomePage.walkthroughs.openOnInstall": false
+                "workbench.iconTheme": "vs-minimal",
+                "github.codespaces.rebuildEnvironment": true
             }
         }
     },
     "mounts": [
         {
             "source": "/var/run/docker.sock",
-            "target": "/var/run/docker-host.sock", /* https://github.com/devcontainers/features/blob/main/src/docker-outside-of-docker/devcontainer-feature.json */
+            "target": "/var/run/docker-host.sock",
             "type": "bind"
         }
     ],
-    "postCreateCommand": "code --uninstall-extension /opt/cs50/extensions/explain50-1.0.0.vsix && \
-        code --uninstall-extension /opt/cs50/extensions/cs50-0.0.1.vsix && \
-        code --uninstall-extension /opt/cs50/extensions/design50-1.0.0.vsix && \
-        code --uninstall-extension /opt/cs50/extensions/ddb50-2.0.0.vsix && \
-        code --uninstall-extension /opt/cs50/extensions/phpliteadmin-0.0.1.vsix && \
-        code --uninstall-extension /opt/cs50/extensions/style50-0.0.1.vsix && \
-        code --uninstall-extension inferrinizzard.prettier-sql-vscode && \
-        code --uninstall-extension mathematic.vscode-pdf && \
-        code --uninstall-extension ms-azuretools.vscode-docker && \
-        code --uninstall-extension ms-ceintl.vscode-language-pack-* && \
-        code --uninstall-extension ms-vscode.cpptools && \
-        code --uninstall-extension ms-vscode.hexeditor && \
-        code --uninstall-extension ms-vsliveshare.vsliveshare && \
-        code --uninstall-extension redhat.java && \
-        code --uninstall-extension vscjava.vscode-java-debug",
+    "postCreateCommand": "code --uninstall-extension /opt/cs50/extensions/explain50-1.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/cs50-0.0.1.vsix && code --uninstall-extension /opt/cs50/extensions/design50-1.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/ddb50-2.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/phpliteadmin-0.0.1.vsix && code --uninstall-extension /opt/cs50/extensions/style50-0.0.1.vsix && code --uninstall-extension inferrinizzard.prettier-sql-vscode && code --uninstall-extension mathematic.vscode-pdf && code --uninstall-extension ms-azuretools.vscode-docker && code --uninstall-extension ms-ceintl.vscode-language-pack-* && code --uninstall-extension ms-vscode.cpptools && code --uninstall-extension ms-vscode.hexeditor && code --uninstall-extension ms-vsliveshare.vsliveshare && code --uninstall-extension redhat.java && code --uninstall-extension vscjava.vscode-java-debug",
     "remoteEnv": {
-        "CS50_GH_USER": "${localEnv:GITHUB_USER}", /* For lib50 */
+        "CS50_GH_USER": "${localEnv:GITHUB_USER}",
         "LANG": "${localEnv:CS50_LANG}",
         "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
         "TZ": "${localEnv:CS50_TZ}"
