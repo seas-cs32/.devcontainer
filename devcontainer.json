@@ -60,6 +60,8 @@
         }
     ],
     "postCreateCommand": "code --uninstall-extension /opt/cs50/extensions/explain50-1.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/cs50-0.0.1.vsix && code --uninstall-extension /opt/cs50/extensions/design50-1.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/ddb50-2.0.0.vsix && code --uninstall-extension /opt/cs50/extensions/phpliteadmin-0.0.1.vsix && code --uninstall-extension /opt/cs50/extensions/style50-0.0.1.vsix && code --uninstall-extension inferrinizzard.prettier-sql-vscode && code --uninstall-extension mathematic.vscode-pdf && code --uninstall-extension ms-azuretools.vscode-docker && code --uninstall-extension ms-ceintl.vscode-language-pack-* && code --uninstall-extension ms-vscode.cpptools && code --uninstall-extension ms-vscode.hexeditor && code --uninstall-extension ms-vsliveshare.vsliveshare && code --uninstall-extension redhat.java && code --uninstall-extension vscjava.vscode-java-debug",
+    "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
+    "postStartCommand": "/opt/cs50/bin/postStartCommand",
     "remoteEnv": {
         "CS50_GH_USER": "${localEnv:GITHUB_USER}",
         "LANG": "${localEnv:CS50_LANG}",
