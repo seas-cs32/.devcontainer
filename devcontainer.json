@@ -59,7 +59,6 @@
             "type": "bind"
         }
     ],
-    "postStartCommand": "/opt/cs50/bin/postStartCommand",
     "remoteEnv": {
         "CS50_GH_USER": "${localEnv:GITHUB_USER}",
         "LANG": "${localEnv:CS50_LANG}",
