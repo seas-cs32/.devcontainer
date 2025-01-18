@@ -61,7 +61,6 @@
                 "files.insertFinalNewline": true,
                 "files.trimTrailingWhitespace": true,
                 "git.autofetch": true,
-                "git.decorations.enabled": false,
                 "git.terminalAuthentication": true,
                 "gitdoc.autoPull": "off",
                 "gitdoc.commitMessageFormat": "ccc, LLL d, kkkk, h:mm a ZZ",
